@@ -6,7 +6,7 @@
   <link href="https://knowledge-base-eight.vercel.app/atom.xml" rel="self"/>
   
   <link href="https://knowledge-base-eight.vercel.app/"/>
-  <updated>2021-12-25T04:07:31.113Z</updated>
+  <updated>2021-12-25T04:19:08.239Z</updated>
   <id>https://knowledge-base-eight.vercel.app/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="https://knowledge-base-eight.vercel.app/2021/12/25/index/"/>
     <id>https://knowledge-base-eight.vercel.app/2021/12/25/index/</id>
     <published>2021-12-25T04:03:51.000Z</published>
-    <updated>2021-12-25T04:07:31.113Z</updated>
+    <updated>2021-12-25T04:19:08.239Z</updated>
     
-    <content type="html"><![CDATA[<p>​    欢迎来到我的知识库</p><p>在这里我会记录笔记，碎片知识，你可以把这里当成我的笔记本。大部分文章整理自互联网。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="关于-XueZha’s-Wiki"><a href="#关于-XueZha’s-Wiki" class="headerlink" title="关于 XueZha’s Wiki"></a>关于 XueZha’s Wiki</h1><h2 id="关于本-Wiki"><a href="#关于本-Wiki" class="headerlink" title="关于本 Wiki"></a>关于本 Wiki</h2><p>　　XueZha’s Wiki 是个人用来知识管理，本 Wiki 绝大部分内容来自互联网与书籍，版权属于原作者。感谢各位大佬们的文字给我在学习过程中的帮助与指引，由于部分内容记录属于学习时仓促记录，部分版权出处可能有遗漏，恳请各位朋友提出，感激不尽。<br>　　本 Wiki 基于 hexo ，主题使用 <a href="https://github.com/zthxxx/hexo-theme-Wikitten">Wikitten</a>，感谢 zthxxx 大佬的优秀的主题。Alliot 只是在其主题基础上，按照自己的要求增删了一些功能。</p><h2 id="勘误"><a href="#勘误" class="headerlink" title="勘误"></a>勘误</h2><p>　　Wiki 中的资料虽大部分经过实操验证，但由于环境的差异，不一定完全正确，如有错误，请在<a href="https://onexuezha.vercel.app/feedback/">我的博客反馈界面反馈</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;​    欢迎来到我的知识库&lt;/p&gt;
-&lt;p&gt;在这里我会记录笔记，碎片知识，你可以把这里当成我的笔记本。大部分文章整理自互联网。&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;关于-XueZha’s-Wiki&quot;&gt;&lt;a href=&quot;#关于-XueZha’s-Wiki&quot; class=&quot;headerlink&quot; title=&quot;关于 XueZha’s Wiki&quot;&gt;&lt;/a&gt;关于 XueZha’s Wiki&lt;/h1&gt;&lt;h2 id=&quot;关于本-Wiki&quot;</summary>
       
     
     
