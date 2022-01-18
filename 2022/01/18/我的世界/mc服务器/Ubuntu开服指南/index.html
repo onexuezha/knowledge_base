@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>XueZha的知识库</title>
+    
+    
+        <meta name="keywords" content="XueZha的知识库" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Ubuntu(Linux)开服教程 1.前言：为什么要选择Linux开服？ Linux相比于Windows具有稳定性高，安全性好，资源占用小（划重点）等优点，对于有限的服务器资源，我们当然希望它能带动更多的玩家，提供更好的体验。而Ubuntu则是一款基于Linux的系统，并且在各大云平台上都可以找到，本教程将介绍搭建基于Ubuntu的我的世界服务端。当然若是你用其他Linux发行版，也是可以看看本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XueZha的知识库">
+<meta property="og:url" content="https://knowledge-base-eight.vercel.app/2022/01/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/mc%E6%9C%8D%E5%8A%A1%E5%99%A8/Ubuntu%E5%BC%80%E6%9C%8D%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="XueZha的知识库">
+<meta property="og:description" content="Ubuntu(Linux)开服教程 1.前言：为什么要选择Linux开服？ Linux相比于Windows具有稳定性高，安全性好，资源占用小（划重点）等优点，对于有限的服务器资源，我们当然希望它能带动更多的玩家，提供更好的体验。而Ubuntu则是一款基于Linux的系统，并且在各大云平台上都可以找到，本教程将介绍搭建基于Ubuntu的我的世界服务端。当然若是你用其他Linux发行版，也是可以看看本">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e495182571.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e4b672d69a.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e5a6f816bc.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e495257d64.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e495257be8.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e4952bcef2.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e49533dbde.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e4952dca3f.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e6d49ca395.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e6d4b2d4c8.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e6d4aebad6.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e76c1e0bf0.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/11/5a2e76c0c0c70.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/12/5a2ee08a88e96.jpg">
+<meta property="og:image" content="https://i.loli.net/2017/12/12/5a2ee258df621.jpg">
+<meta property="article:published_time" content="2022-01-18T12:31:00.544Z">
+<meta property="article:modified_time" content="2022-01-18T12:31:46.404Z">
+<meta property="article:author" content="学渣">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2017/12/11/5a2e495182571.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="XueZha的知识库" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">XueZha的知识库</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" target="_blank" rel="noopener" href="https://onexuezha.vercel.app/">博客</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" target="_blank" rel="noopener" href="https://onexuezha.vercel.app/">博客</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            hexo博客
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            魔改
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/12/26/hexo%E5%8D%9A%E5%AE%A2/%E9%AD%94%E6%94%B9/%E5%8A%A8%E6%80%81%E5%88%86%E7%B1%BB%E6%9D%A1%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%8D%AE%E9%A1%B5%E9%9D%A2%E5%8F%98%E5%8C%96%E8%80%8C%E6%94%B9%E5%8F%98%E7%9A%84%E5%88%86%E7%B1%BB%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA%E6%96%B9%E5%BC%8F/">动态分类条，可以根据页面变化而改变的分类列表展示方式</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/2021/12/26/hexo%E5%8D%9A%E5%AE%A2/jsd%E4%B8%8D%E5%8F%8A%E6%97%B6%E5%88%B7%E6%96%B0/">jsd不及时刷新的解决方案</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            我的世界
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            mc服务器
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="/2022/01/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/mc%E6%9C%8D%E5%8A%A1%E5%99%A8/Ubuntu%E5%BC%80%E6%9C%8D%E6%8C%87%E5%8D%97/"></a></li>  <li class="file"><a href="/2022/01/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/mc%E6%9C%8D%E5%8A%A1%E5%99%A8/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8CMCSM%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA/"></a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/2022/01/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E7%89%A9%E5%93%81id/"></a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/2021/12/25/index/">index</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-我的世界/mc服务器/Ubuntu开服指南" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>Ubuntu(Linux)开服教程</p>
+<p>1.前言：<br>为什么要选择Linux开服？</p>
+<p>Linux相比于Windows具有稳定性高，安全性好，资源占用小（划重点）等优点，对于有限的服务器资源，我们当然希望它能带动更多的玩家，提供更好的体验。而Ubuntu则是一款基于Linux的系统，并且在各大云平台上都可以找到，本教程将介绍搭建基于Ubuntu的我的世界服务端。当然若是你用其他Linux发行版，也是可以看看本教程的。</p>
+<p>服务端的选择？<br>参考本版jiongjionger的教程<a target="_blank" rel="noopener" href="http://www.mcbbs.net/thread-478126-1-1.html">Minecraft服务器优化教程 —— 让多带50%的玩家不再是梦</a>，个人比较推荐spigot或者paperspigot.<br>各版服务端下载地址：<a href="https://www.mcbbs.net/plugin.php?id=link_redirect&target=https://yivesmirror.com/downloads/spigot">Yive’s Mirror</a></p>
+<p><strong>2.准备工作：</strong><br>一个合适的主机，推荐安装Ubuntu14.04，配置依你想带动的人数而定（2核2G，3M宽带优化下可以带动30人）<br>一个支持SSH的终端模拟软件，推荐Xshell5。<br>一个文件传输软件，推荐Xftp。<br>P.S.下载地址：游客，如果您要查看本帖隐藏内容请<a target="_blank" rel="noopener" href="https://www.mcbbs.net/forum.php?mod=post&action=reply&fid=178&tid=770886">回复</a></p>
+<p><strong>3.连接服务器：</strong><br>注意：linux中CTRL+C为杀死进程，CTRL+Z为将进程放到后台运行，所以别用快捷键进行复制等操作，复制粘贴请在Xshell里使用右键完成</p>
+<p>①进入Xshell，选择新建，在名称处填入你想为你的服务器起的名字，主机处填写服务器IP或者域名，端口号如服务器商家未专门说明，默认为22，然后点击确定。  <img src="https://i.loli.net/2017/12/11/5a2e495182571.jpg" alt="img">  ②选择你的服务器，点击连接  <img src="https://i.loli.net/2017/12/11/5a2e4b672d69a.jpg" alt="img">  在弹出的安全警告中选择“接受并保存”  <img src="https://i.loli.net/2017/12/11/5a2e5a6f816bc.jpg" alt="img">  ③输入用户名（默认为root），密码（一般在开通服务器的时候会设置）后登陆成功。  <img src="https://i.loli.net/2017/12/11/5a2e495257d64.jpg" alt="img"> </p>
+<p><strong>4.为服务端添加一个用户</strong></p>
+<p> P.S.:使用root账户直接开服我个人是不推荐的，所以这里给出新增用户的方法。 ①输入adduser minecraft  <img src="https://i.loli.net/2017/12/11/5a2e495257be8.jpg" alt="img">  ②输入密码，然后再确认输入密码  <img src="https://i.loli.net/2017/12/11/5a2e4952bcef2.jpg" alt="img">  ③填写账户信息，直接回车跳过就好，然后系统会让你确认一下，输入Y回车即可  <img src="https://i.loli.net/2017/12/11/5a2e49533dbde.jpg" alt="img">  ④将新建的账户添加到sudo list： 复制该命令，并按回车执行即可 echo “minecraft ALL=(ALL) NOPASSWD: ALL” &gt;&gt; /etc/sudoers<em>复制代码</em>  <img src="https://i.loli.net/2017/12/11/5a2e4952dca3f.jpg" alt="img">   ⑤好了，现在切换到新的用户来开始服务器的搭建： 按CTRL+D结束连接，然后按3-②的步骤，用minecraft账户登陆服务器。 </p>
+<p><strong>5.安装相关软件：</strong></p>
+<p>①升级库：<strong>sudo apt-get update -y</strong> ②安装Java：<strong>sudo apt-get install -y openjdk-8-jre</strong> ③安装screen (部分服务器内置)：<strong>sudo apt-get install -y screen</strong> ④安装文本编辑器nano (部分服务器内置)：<strong>sudo apt-get install -y nano</strong> ⑤安装下载工具curl (部分服务器内置)：<strong>sudo apt-get install -y curl</strong></p>
+<p><strong>6.下载服务器核心：</strong><br>不管你想开什么服，服务器核心都是最重要的，我们可以在<a href="https://www.mcbbs.net/plugin.php?id=link_redirect&target=http://yivesmirror.com/">Yive’s Mirror</a>下载到需要的端。</p>
+<p>①进入网站，在”Download” 下选择你想要下载的端，点击进入<br><img src="https://i.loli.net/2017/12/11/5a2e6d49ca395.jpg" alt="img"></p>
+<p>②选择合适的版本，（以spigot端为例，里面的40M的文件才是正确的端。）点击右侧的Download</p>
+<p><img src="https://i.loli.net/2017/12/11/5a2e6d4b2d4c8.jpg" alt="img"></p>
+<p>③右键该文件名，选择复制链接地址。</p>
+<p><img src="https://i.loli.net/2017/12/11/5a2e6d4aebad6.jpg" alt="img"></p>
+<p>④进入Xshell，输入命令，下载链接处用你复制的网址右键粘贴过去就好了<br>curl -o server.jar 下载链接<em>复制代码</em>按回车，等待下载完成</p>
+<p><img src="https://i.loli.net/2017/12/11/5a2e76c1e0bf0.jpg" alt="img"></p>
+<p>下载完成后，输入命令 <strong>ls</strong> 查看当前目录，可以看到已经下载完成的端。</p>
+<p><img src="https://i.loli.net/2017/12/11/5a2e76c0c0c70.jpg" alt="img"></p>
+<p><strong>7.运行服务端</strong></p>
+<p><strong>8.配置服务器参数:</strong><br>如何在Ubuntu环境里配置文件<br>下面是服务器的几个配置文件，如果不想细看，可以直接使用懒人福利哦。当然，除server.properties外，其余文件的配置与否影响的只是服务器优化，可以视情况决定更改。<br>server.properties:</p>
+<p>此文件下需要注意配置的项目为：</p>
+<p>属性备注server-port服务器端口，默认25565，视需求决定是否更改force-gamemode玩家进入时是否强制更改其游戏模式network-compression-threshold设置得较低可以节约网络资源，较高可以节约性能<br>默认256，推荐在64-512内white-list是否启用白名单(注:将从whitelist.json加载白名单)<strong>online-mode****是否开启在线验证，即盗版玩家是否可以登录</strong>resource-pack是否使用服务器资源包，需填入URL链接pvp是否允许PVPdifficulty服务器的难度(0-和平,1-简单,2-普通,3-困难)enable-command-block是否允许使用命令方块gamemode默认游戏模式(0-生存,1-创造,2-冒险)max-players同时在线的最大人数generate-structures是否生成结构，即村庄，女巫小屋等view-distance传递给玩家的视距，调小此值可显著降低资源占用默认是10，推荐调到6P.S.如果想做刷怪塔类建筑，8可能更为合适bukkit.yml</p>
+<p>此文件下需要注意配置的项目为：<br>属性备注shutdown-message服务器关闭时的提示信息spawn-limits可简单理解为每玩家允许生物数默认：monsters:70, animals:15, water-animals:5, ambient:15建议：monsters:50, animals:10, water-animals:3, ambient:4<br>chunk-gc区块回收默认: period-in-ticks:600, load-threshold:0建议：period-in-ticks:300, load-threshold:300ticks-per服务器尝试生成怪物的频率（参数越高，怪物生成越少）默认: 1建议：1-5spigot.yml<br>此文件下需要注意配置的项目为：</p>
+<p>属性备注message可以自定义服务器的一些提示信息mob-spawn-range怪物生成的范围半径，默认: 4，推荐: 3entity-activation-range实体的交互频率<br>默认: animals:32, monsters:32, misc:16<br>建议: animals:8, monsters:16, misc:8max-tick-time默认：tile:50, entity:50<br>建议：tile:10, entity:20merge-radius物品合并的范围<br>默认: item:2.5, exp:3.0<br>建议: item:3.5, exp:6.0view-distance视距，和server.properties设置一致懒人福利：</p>
+<p>粘贴代码并运行即可直接生成楼主的配置文件</p>
+<p>server.properties:40人在线，困难模式，关闭在线验证，视距6，偏向节约宽带资源base64 -di &gt; ./server.properties &lt;&lt;&lt; ‘I01pbmVjcmFmdCBzZXJ2ZXIgcHJvcGVydGllcwpnZW5lcmF0b3Itc2V0dGluZ3M9CnVzZS1uYXRpdmUtdHJhbnNwb3J0PXRydWUKb3AtcGVybWlzc2lvbi1sZXZlbD00CmFsbG93LW5ldGhlcj10cnVlCmxldmVsLW5hbWU9d29ybGQKZW5hYmxlLXF1ZXJ5PWZhbHNlCmFsbG93LWZsaWdodD1mYWxzZQpwcmV2ZW50LXByb3h5LWNvbm5lY3Rpb25zPWZhbHNlCnNlcnZlci1wb3J0PTI1NTY1Cm1heC13b3JsZC1zaXplPTI5OTk5OTg0CmxldmVsLXR5cGU9REVGQVVMVAplbmFibGUtcmNvbj1mYWxzZQpsZXZlbC1zZWVkPQpmb3JjZS1nYW1lbW9kZT1mYWxzZQpzZXJ2ZXItaXA9Cm5ldHdvcmstY29tcHJlc3Npb24tdGhyZXNob2xkPTEyOAptYXgtYnVpbGQtaGVpZ2h0PTI1NgpzcGF3bi1ucGNzPXRydWUKd2hpdGUtbGlzdD1mYWxzZQpzcGF3bi1hbmltYWxzPXRydWUKaGFyZGNvcmU9ZmFsc2UKc25vb3Blci1lbmFibGVkPXRydWUKcmVzb3VyY2UtcGFjay1zaGExPQpvbmxpbmUtbW9kZT1mYWxzZQpyZXNvdXJjZS1wYWNrPQpwdnA9dHJ1ZQpkaWZmaWN1bHR5PTMKZW5hYmxlLWNvbW1hbmQtYmxvY2s9dHJ1ZQpnYW1lbW9kZT0wCnBsYXllci1pZGxlLXRpbWVvdXQ9MAptYXgtcGxheWVycz00MApzcGF3bi1tb25zdGVycz10cnVlCmdlbmVyYXRlLXN0cnVjdHVyZXM9dHJ1ZQp2aWV3LWRpc3RhbmNlPTYKbW90ZD1BIE1pbmVjcmFmdCBTZXJ2ZXI=’*复制代码*<br>bukkit.yml:按推荐写的base64 -di &gt; ./bukkit.yml &lt;&lt;&lt; ‘c2V0dGluZ3M6CiAgYWxsb3ctZW5kOiB0cnVlCiAgd2Fybi1vbi1vdmVybG9hZDogdHJ1ZQogIHBlcm1pc3Npb25zLWZpbGU6IHBlcm1pc3Npb25zLnltbAogIHVwZGF0ZS1mb2xkZXI6IHVwZGF0ZQogIHBsdWdpbi1wcm9maWxpbmc6IGZhbHNlCiAgY29ubmVjdGlvbi10aHJvdHRsZTogNDAwMAogIHF1ZXJ5LXBsdWdpbnM6IHRydWUKICBkZXByZWNhdGVkLXZlcmJvc2U6IGRlZmF1bHQKICBzaHV0ZG93bi1tZXNzYWdlOiBTZXJ2ZXIgY2xvc2VkCnNwYXduLWxpbWl0czoKICBtb25zdGVyczogNTAKICBhbmltYWxzOiAxMAogIHdhdGVyLWFuaW1hbHM6IDMKICBhbWJpZW50OiA0CmNodW5rLWdjOgogIHBlcmlvZC1pbi10aWNrczogMzAwCiAgbG9hZC10aHJlc2hvbGQ6IDMwMAp0aWNrcy1wZXI6CiAgYW5pbWFsLXNwYXduczogNDAwCiAgbW9uc3Rlci1zcGF3bnM6IDEKICBhdXRvc2F2ZTogNjAwMAphbGlhc2VzOiBub3ctaW4tY29tbWFuZHMueW1s’*复制代码*<br>spigot.yml:按推荐写的base64 -di &gt; ./spigot.yml &lt;&lt;&lt; ‘IyBUaGlzIGlzIHRoZSBtYWluIGNvbmZpZ3VyYXRpb24gZmlsZSBmb3IgU3BpZ290LgojIEFzIHlvdSBjYW4gc2VlLCB0aGVyZSdzIHRvbnMgdG8gY29uZmlndXJlLiBTb21lIG9wdGlvbnMgbWF5IGltcGFjdCBnYW1lcGxheSwgc28gdXNlCiMgd2l0aCBjYXV0aW9uLCBhbmQgbWFrZSBzdXJlIHlvdSBrbm93IHdoYXQgZWFjaCBvcHRpb24gZG9lcyBiZWZvcmUgY29uZmlnd**bmcuCiMgRm9yIGEgcmVmZXJlbmNlIGZvciBhbnkgdmFyaWFibGUgaW5zaWRlIHRoaXMgZmlsZSwgY2hlY2sgb3V0IHRoZSBTcGlnb3Qgd2lraSBhdAojIGh0dHA6Ly93d3cuc3BpZ290bWMub3JnL3dpa2kvc3BpZ290LWNvbmZpZ3VyYXRpb24vCiMgCiMgSWYgeW91IG5lZWQgaGVscCB3aXRoIHRoZSBjb25maWd1cmF0aW9uIG9yIGhhdmUgYW55IHF1ZXN0aW9ucyByZWxhdGVkIHRvIFNwaWdvdCwKIyBqb2luIHVzIGF0IHRoZSBJUkMgb3IgZHJvcCBieSBvdXIgZm9ydW1zIGFuZCBsZWF2ZSBhIHBvc3QuCiMgCiMgSVJDOiAjc3BpZ290IEAgaXJjLnNwaS5ndCAoIGh0dHA6Ly93d3cuc3BpZ290bWMub3JnL3BhZ2VzL2lyYy8gKQojIEZvcnVtczogaHR0cDovL3d3dy5zcGlnb3RtYy5vcmcvCgpjb25maWctdmVyc2lvbjogMTEKc2V0dGluZ3M6CiAgc2F2ZS11c2VyLWNhY2hlLW9uLXN0b3Atb25seTogdHJ1ZQogIGJ1bmdlZWNvcmQ6IGZhbHNlCiAgbGF0ZS1iaW5kOiBmYWxzZQogIHNhbXBsZS1jb3VudDogMTIKICBwbGF5ZXItc2h1ZmZsZTogMAogIGZpbHRlci1jcmVhdGl2ZS1pdGVtczogdHJ1ZQogIHVzZXItY2FjaGUtc2l6ZTogMTAwMAogIGludC1jYWNoZS1saW1pdDogMTAyNAogIG1vdmVkLXdyb25nbHktdGhyZXNob2xkOiAwLjA2MjUKICBtb3ZlZC10b28tcXVpY2tseS1tdWx0aXBsaWVyOiAxMC4wCiAgaXRlbS1kaXJ0eS10aWNrczogMjAKICB0aW1lb3V0LXRpbWU6IDYwCiAgcmVzdGFydC1vbi1jcmFzaDogdHJ1ZQogIHJlc3RhcnQtc2NyaXB0OiAuL3N0YXJ0LnNoCiAgbmV0dHktdGhyZWFkczogNAogIGF0dHJpYnV0ZToKICAgIG1heEhlYWx0aDoKICAgICAgbWF4OiAyMDQ4LjAKICAgIG1vdmVtZW50U3BlZWQ6CiAgICAgIG1heDogMjA0OC4wCiAgICBhdHRhY2tEYW1hZ2U6CiAgICAgIG1heDogMjA0OC4wCiAgZGVidWc6IGZhbHNlCmNvbW1hbmRzOgogIHRhYi1jb21wbGV0ZTogMAogIGxvZzogdHJ1ZQogIHNwYW0tZXhjbHVzaW9uczoKICAtIC9za2lsbAogIHNpbGVudC1jb21tYW5kYmxvY2stY29uc29sZTogZmFsc2UKICByZXBsYWNlLWNvbW1hbmRzOgogIC0gc2V0YmxvY2sKICAtIHN1bW1vbgogIC0gdGVzdGZvcmJsb2NrCiAgLSB0ZWxscmF3Cm1lc3NhZ2VzOgogIHdoaXRlbGlzdDog5oKo5LiN5Zyo5pyN5Yqh5Zmo55qE55m95ZCN5Y2V5YaF77yBCiAgdW5rbm93bi1jb21tYW5kOiDmnKrnn6Xlkb3ku6QuIOivt+i+k+WFpSIvaGVscCLlr7vmsYLluK7liqnvvIEKICBzZXJ2ZXItZnVsbDog5pyN5Yqh5Zmo5bey5ruh77yBCiAgb3V0ZGF0ZWQtY2xpZW50OiDlrqLmiLfnq6/niYjmnKzov4fkvY7vvIzor7fljYfnuqfliLB7MH3vvIEKICBvdXRkYXRlZC1zZXJ2ZXI6IOacjeWKoeWZqOeJiOacrOS4unswfe+8jOaCqOeahOeJiOacrOi/h+mrmO+8gQogIHJlc3RhcnQ6IOacjeWKoeWZqOato+WcqOmHjeWQr++8gQphZHZhbmNlbWVudHM6CiAgZGlzYWJsZS1zYXZpbmc6IGZhbHNlCiAgZGlzYWJsZWQ6CiAgLSBtaW5lY3JhZnQ6c3RvcnkvZGlzYWJsZWQKc3RhdHM6CiAgZGlzYWJsZS1zYXZpbmc6IGZhbHNlCiAgZm9yY2VkLXN0YXRzOiB7fQp3b3JsZC1zZXR0aW5nczoKICBkZWZhdWx0OgogICAgdmVyYm9zZTogdHJ1ZQogICAgbW9iLXNwYXduLXJhbmdlOiAzCiAgICBncm93dGg6CiAgICAgIGNhY3R1cy1tb2RpZmllcjogMTAwCiAgICAgIGNhbmUtbW9kaWZpZXI6IDEwMAogICAgICBtZWxvbi1tb2RpZmllcjogMTAwCiAgICAgIG11c2hyb29tLW1vZGlmaWVyOiAxMDAKICAgICAgcHVtcGtpbi1tb2RpZmllcjogMTAwCiAgICAgIHNhcGxpbmctbW9kaWZpZXI6IDEwMAogICAgICB3aGVhdC1tb2RpZmllcjogMTAwCiAgICAgIG5ldGhlcndhcnQtbW9kaWZpZXI6IDEwMAogICAgICB2aW5lLW1vZGlmaWVyOiAxMDAKICAgICAgY29jb2EtbW9kaWZpZXI6IDEwMAogICAgZW50aXR5LWFjdGl2YXRpb24tcmFuZ2U6CiAgICAgIGFuaW1hbHM6IDgKICAgICAgbW9uc3RlcnM6IDE2CiAgICAgIG1pc2M6IDgKICAgIGVudGl0eS10cmFja2luZy1yYW5nZToKICAgICAgcGxheWVyczogNDgKICAgICAgYW5pbWFsczogNDgKICAgICAgbW9uc3RlcnM6IDQ4CiAgICAgIG1pc2M6IDMyCiAgICAgIG90aGVyOiA2NAogICAgdGlja3MtcGVyOgogICAgICBob3BwZXItdHJhbnNmZXI6IDgKICAgICAgaG9wcGVyLWNoZWNrOiAxCiAgICBob3BwZXItYW1vdW50OiAxCiAgICByYW5kb20tbGlnaHQtdXBkYXRlczogZmFsc2UKICAgIHNhdmUtc3RydWN0dXJlLWluZm86IHRydWUKICAgIGRyYWdvbi1kZWF0aC1zb3VuZC1yYWRpdXM6IDAKICAgIHNlZWQtdmlsbGFnZTogMTAzODczMTIKICAgIHNlZWQtZmVhdHVyZTogMTQzNTc2MTcKICAgIHNlZWQtbW9udW1lbnQ6IDEwMzg3MzEzCiAgICBzZWVkLXNsaW1lOiA5ODcyMzQ5MTEKICAgIGh1bmdlcjoKICAgICAganVtcC13YWxrLWV4aGF1c3Rpb246IDAuMDUKICAgICAganVtcC1zcHJpbnQtZXhoYXVzdGlvbjogMC4yCiAgICAgIGNvbWJhdC1leGhhdXN0aW9uOiAwLjEKICAgICAgcmVnZW4tZXhoYXVzdGlvbjogNi4wCiAgICAgIHN3aW0tbXVsdGlwbGllcjogMC4wMQogICAgICBzcHJpbnQtbXVsdGlwbGllcjogMC4xCiAgICAgIG90aGVyLW11bHRpcGxpZXI6IDAuMAogICAgbWF4LXRudC1wZXItdGljazogMTAwCiAgICBtYXgtdGljay10aW1lOgogICAgICB0aWxlOiAxMAogICAgICBlbnRpdHk6IDIwCiAgICBpdGVtLWRlc3Bhd24tcmF0ZTogNjAwMAogICAgbWVyZ2UtcmFkaXVzOgogICAgICBpdGVtOiAzLjUKICAgICAgZXhwOiA2LjAKICAgIGFycm93LWRlc3Bhd24tcmF0ZTogMTIwMAogICAgZW5hYmxlLXpvbWJpZS1waWdtZW4tcG9ydGFsLXNwYXduczogdHJ1ZQogICAgd2l0aGVyLXNwYXduLXNvdW5kLXJhZGl1czogMAogICAgdmlldy1kaXN0YW5jZTogNgogICAgaGFuZ2luZy10aWNrLWZyZXF1ZW5jeTogMTAwCiAgICB6b21iaWUtYWdncmVzc2l2ZS10b3dhcmRzLXZpbGxhZ2VyOiB0cnVlCiAgICBuZXJmLXNwYXduZXItbW9iczogZmFsc2UKICAgIG1heC1lbnRpdHktY29sbGlzaW9uczogOA==’<em>复制代码</em><br>备注：本部分配置参考了以下文章：</p>
+<p><a target="_blank" rel="noopener" href="http://www.mcbbs.net/thread-478126-1-1.html">Minecraft服务器优化教程 —— 让多带50%的玩家不再是梦</a></p>
+<p>[<a target="_blank" rel="noopener" href="https://www.spigotmc.org/threads/guide-optimizing-spigot-remove-lag-fix-tps-improve-performance.21726/">GUIDE] Optimizing Spigot - Remove lag, Fix tps &amp; Improve performance!</a></p>
+<p><strong>9.制作启动关闭脚本</strong></p>
+<p>最简单的启动脚本当然是<del>java -jar server.jar</del>但是这样来启动是有一些问题的，第一、我们没有设置启动参数；第二、这样的话我们一旦关闭SSH，该进程也会被杀死，毕竟，我们总不能一直连着服务器吧。所以可以用下面的方式来写启动脚本 launch.sh :①用 <strong>nano launch.sh</strong> 新建并编辑一个名为launch.sh的文件②粘贴下面代码框中的内容，其中-Xms1G代表最小内存1G，-Xmx2G代表最大内存2G。③按CTRL+X再输入Y回车保存④输入命令 <strong>chmod +x launch.sh</strong> 为脚本赋予权限#!/bin/sh</p>
+<p>screen -dmS mc java -Xms1G -Xmx2G -XX:+AggressiveOpts -XX:+UseCompressedOops -jar /home/minecraft/server.jar<em>复制代码</em></p>
+<p>当然，有一个关闭脚本 stop.sh 也不错<br>#!/bin/sh</p>
+<p>screen -dr mc -X stuff “say 服务器将在10S后关闭！\n”<br>sleep 10<br>screen -dr mc -X stuff “stop\n”<em>复制代码</em><br>惯例的懒人福利:launch.sh<br>base64 -di &gt; ./launch.sh &lt;&lt;&lt; ‘IyEvYmluL3NoCgpzY3JlZW4gLWRtUyBtYyBqYXZhIC1YbXMxRyAtWG14MkcgLVhYOitBZ2dyZXNzaXZlT3B0cyAtWFg6K1VzZUNvbXByZXNzZWRPb3BzIC1qYXIgL2hvbWUvbWluZWNyYWZ0L3NlcnZlci5qYXI=’<em>复制代码</em></p>
+<p>stop.sh<br>base64 -di &gt; ./stop.sh &lt;&lt;&lt; ‘IyEvYmluL3NoCgpzY3JlZW4gLWRyIG1jIC1YIHN0dWZmICJzYXkg5pyN5Yqh5Zmo5bCG5ZyoMTBT5ZCO5YWz6Zet77yBXG4iCnNsZWVwIDEwCnNjcmVlbiAtZHIgbWMgLVggc3R1ZmYgInN0b3BcbiI=’<em>复制代码</em></p>
+<p>使用完命令后，记得用 <strong>chmod +x launch.sh</strong> 和<strong>chmod +x stop.sh</strong> 为脚本赋予权限。<br>制作好脚本后，开服输入”./launch.sh”,关服输入”./stop.sh”即可。</p>
+<p><strong>10.查看运行中的服务器</strong><br>有小伙伴可能会问了：我执行了脚本，但是我什么都没看见，我的控制台了，我还想用控制台执行命令的啊？<br>因为使用了screen来执行任务，所以控制台当然在screen里面啊<br>我们输入”<strong>screen -r mc</strong>“ 来返回控制台，这时就可以使用控制台来执行诸如op一类的命令了。那么问题又来了，使用完控制台，我该怎么安全退出呢？<br>这是按住CTRL+A然后松手再按一下D即可将screen放到后台去，这时你退出SSH也没有关系的。</p>
+<p><strong>11.自动重启脚本</strong></p>
+<p>很明显，服务端运行久了就容易不稳定，所以，我们让服务端定期重启一下岂不是美滋滋。<br>参照第9步的方式制作一个脚本”restart.sh”#!/bin/sh</p>
+<p>screen -dr mc -X stuff “say 服务器将在10S后例行重启！\n”<br>sleep 10<br>screen -dr mc -X stuff “stop\n”<br>sleep 20<br>screen -dmS mc java -Xms1G -Xmx2G -XX:+AggressiveOpts -XX:+UseCompressedOops -jar /home/minecraft/server.jar<br><em>复制代码</em></p>
+<p>当然还是惯例有懒人福利<br>base64 -di &gt; ./restart.sh &lt;&lt;&lt; ‘IyEvYmluL3NoCgpzY3JlZW4gLWRyIG1jIC1YIHN0dWZmICJzYXkg5pyN5Yqh5Zmo5bCG5ZyoMTBT5ZCO5L6L6KGM6YeN5ZCv77yBXG4iCnNsZWVwIDEwCnNjcmVlbiAtZHIgbWMgLVggc3R1ZmYgInN0b3BcbiIKc2xlZXAgMjAKc2NyZWVuIC1kbVMgbWMgamF2YSAtWG1zMUcgLVhteDJHIC1YWDorQWdncmVzc2l2ZU9wdHMgLVhYOitVc2VDb21wcmVzc2VkT29wcyAtamFyIC9ob21lL21pbmVjcmFmdC9zZXJ2ZXIuamFy’<em>复制代码</em></p>
+<p>还是要记得用” <strong>chmod +x restart.sh</strong>“加权限哦<br>接下来输入 “<strong>crontab -e</strong>“ 输入/bin/nano 前对应的数字，按回车进入编辑</p>
+<p><img src="https://i.loli.net/2017/12/12/5a2ee08a88e96.jpg" alt="img"></p>
+<p>在最下面添加<br>0 5 * * 1,5 sh /home/minecraft/restart.sh<em>复制代码</em>按CTRL+X输入y后保存（代码的意思是每周一周五早上5点自动重启服务端）</p>
+<p><img src="https://i.loli.net/2017/12/12/5a2ee258df621.jpg" alt="img"></p>
+<p>然后复制一下代码并回车重启<strong>crond</strong>服务即可（可能需要输入root密码）。service crond restart<em>复制代码</em><br><strong>12.FAQs</strong></p>
+<p>①A:出现”XX: command not found”怎么办？<br> Q:如果你安装了我在前面提到的一排软件，在本教程范围内应该不会出现这个问题，如果出现了，请尝试”sudo apt-get install XX”</p>
+<p>②A:如何查询自己的IP<br> Q:你不是在连接ssh时就输入过吗？好吧，运行”curl ifconfig.me”就可以反馈IP。</p>
+<p>③A:我在运行程序时卡住了，怎么办？<br> Q:按CTRL+C杀死当前进程。</p>
+<p>④A:哪些常见的linux指令是开服需要掌握的？<br> Q:rm XX 删除文件<br>  rm -rf XX 删除文件夹<br>  mkdir XX 创建文件夹<br>  ls 显示当前目录<br>  zip/unzip 压缩/解压<br>  cp/mv XX 复制/移动XX文件（夹）<br>  包括但不限于这些啦</p>
+<p>⑤A:我想设置其他时间段重启可以吗？<br> Q:当然，crontab是按以下格式排列的<br>分 小时 天 月 星期 命令  #其中星期天是0，不设置的地方用 * 跳过<em>复制代码</em></p>
+<p>⑥A:在配置自动启动时，系统提示Failed to start crond.service: Unit crond.service not found.<br> Q:你使用了Ubuntu 16.04系统，在该系统中crond 改名为 cron，所以应该输入service cron restart</p>
+<p>⑧A:我用的不是Ubuntu怎么办<br> Q:如果是Debian，那么按照此教程操作即可，Debian和Ubuntu操作几乎一样，如果是CentOS，请参考教程区另外的文章，当然本教程的部分内容如懒人福利是可以照搬的QwQ。<br>⑦A:我没有问题了<br> Q:好的2333，有问题欢迎在回复中提出。</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/2022/01/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/mc%E6%9C%8D%E5%8A%A1%E5%99%A8/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8CMCSM%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    (no title)
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2022/01/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E7%89%A9%E5%93%81id/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title"></div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            学渣 &copy; 2022 
+            <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
